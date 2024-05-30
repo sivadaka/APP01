@@ -102,5 +102,32 @@ Angular Architecture
             <img [src]="myLogo" /> refers to the field, if the field value changes then attribute value also changes
             <img src="../imgs/log.png" /> the src is direclty pointing to value
 
-        Event Binding is to bind a method with an event directive.
+        Event Binding
+            is to bind a method with an event directive.
         <element (eventDirective)="method()"></element>
+
+        onBlur in html -> blur in angular
+        onSubmit -> ngSubmit.. etc
+
+        Style Binding:
+            is about binding an expression to a cssproperty or a cssclass;
+            [style.cssproperty]="expression"
+            let abcd:string = "CENTER";
+            <p [style.textAlign]="abcd"> Some Text </p>
+
+            [ngsytle]="jsonObjectHavingCssPropertyNamesAsKeyAndValuesAsValues"
+            let obj1 = {width: "20px", height:"100px", margin:"10px"};
+            <p [ngStyle]="obj1"> Some Text </p>
+            [class.className]-"booleanExpression"
+
+            let flag:boolean = true;
+            <p [class.highlight]="flag"> Some Text </p>
+            [ngClass]="arrayOfClassNames"
+
+            let myClasses:string[] = ["highlight", "important", "bordered"];
+            <p [ngClass]="myClasses"> Some Text </p>
+
+            [ngClass]="jsonObjectHavingClassNamesAsKeyAndBoolenAsValues"
+
+            let myClasses={"highlight":true, "importatn":false, "bordered":true};
+            <p [ngclass]="myclass>
