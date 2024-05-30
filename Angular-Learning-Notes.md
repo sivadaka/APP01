@@ -84,7 +84,7 @@ Angular Architecture
         is the way to consume the fields and methods of a component class in its template.
         we bind the fields with DOM in the html and the methods with the events in the html.
 
-        Interpolation (one way data binding)
+        Interpolation
             to render the value of an expression in the content of an element.
             <element> {{expression}} </element>
             <p> sum of {{n1}} and {{n2}} is {{n1+n2}} </p>
@@ -96,3 +96,11 @@ Angular Architecture
             <input [(ngModel)]="fieldName" />
             'ngModel' is a directive defined in 'FormsModule' from @angular/forms
         
+        One-way data binding:
+            Attribute Binding is about binding the value of a field to an attribute
+            <element [attribute]="field"></element>
+            <img [src]="myLogo" /> refers to the field, if the field value changes then attribute value also changes
+            <img src="../imgs/log.png" /> the src is direclty pointing to value
+
+        Event Binding is to bind a method with an event directive.
+        <element (eventDirective)="method()"></element>
