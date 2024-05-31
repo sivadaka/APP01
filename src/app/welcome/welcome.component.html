@@ -1,11 +1,27 @@
 <section class="card">
     <h3>Welcome</h3>
+
+    <div>
+        <img [src]="logos[logoIndex]" (click)="shift()" [style.width.px]="imgWidth" [ngClass]="decorator" />
+    </div>
+
     <p>Hello! <strong>{{userName}}!</strong> We are very happy to have you here...</p>
 
     <form>
         <div>
             <label>What is your name? </label> 
             <input type="text" name="textbox1" [(ngModel)]="userName" />
+        </div>
+        <div>
+            <label>Log width: {{imgWidth}} px
+                <input type="range" name="textbox2" [(ngModel)]="imgWidth" min="50" max="500" />
+            </label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="c1" [(ngModel)]="decorator.centered" /> Apply Center </label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="c2" [(ngModel)]="decorator.bordered" /> Apply Border </label>
         </div>
     </form>
 </section>
