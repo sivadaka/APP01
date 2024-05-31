@@ -146,5 +146,20 @@ Angular Architecture
             <ng-template #template1><p>Template one content</p></ng-template>
             <ng-template #template2><p>Template two content</p></ng-template>
 
+        ngFor:
+            <ng-template [ngFor]="let loopingVar of array">
+                <p>{{loopingVar}}</p>
+            </ng-template>
+            <p *ngFor="let loopingVar of array">
+                {{loopingVar}}
+            </p>
         
+        ngSwitch:
+            <div [ngSwitch]="anExpression">
+                <p *ngSwitchcase="value1"> if expression evalues to value 1 </p>
+                <p *ngSwitchcase="value2"> if expression evalues to value 2 </p>
+                <p *ngSwitchcase="value3"> if expression evalues to value 3 </p>
+                <p *ngSwitchcase="value4"> if expression evalues to value 4 </p>
+                <p *ngSwitchDefault> if expression evalues to none of the above values </p>
+            </div>
             
