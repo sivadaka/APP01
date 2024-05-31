@@ -131,3 +131,20 @@ Angular Architecture
 
             let myClasses={"highlight":true, "importatn":false, "bordered":true};
             <p [ngclass]="myclass>
+
+    Structural Directives:
+
+        ngIf:
+            <ng-template [ngIf]="booleanExpression">
+                <p>This para will appear only if the boolean expression evaluates to true.</p>
+            </ng-template>
+            //Instead of using ngIf inside a ng-tempalte everytime, we can simplify like below...
+            <p *ngIf="booleanExpression"> This para will appear only if the boolean expression evaluates to true. </p> 
+
+        ngIfElse:
+            <ng-container *ngIf="booleanExpression" then template1; else template2></ng-container>
+            <ng-template #template1><p>Template one content</p></ng-template>
+            <ng-template #template2><p>Template two content</p></ng-template>
+
+        
+            
