@@ -1,0 +1,18 @@
+<section class="card">
+    <h3>My Friends</h3>
+
+    <ol *ngIf="friendsList.length > 0">
+        <li *ngFor="let f of friendsList; index as i">
+            {{f}}
+            <button type="button" (click)="remove(i)">Delete</button>
+        </li>
+    </ol>
+
+    <p *ngIf="friendsList.length === 0"><strong>No Friends in the list</strong></p>
+
+    <form (ngSubmit)="add()">
+        <input type="text" name="friendName" placeholder="New Friend Name" [(ngModel)]="friendName" />
+        <button>Add Friend</button>
+    </form>
+
+</section>
